@@ -2,21 +2,22 @@ const express = require("express");
 
 const app = express();
 
-const { adminAuth, userAuth } = require("./middlewares/auth");
+app.get("/getUserData", (req, res) => {
+  try {
+    // Logic of DB call and get user data
 
-//Handle Auth Middleware for all GET POST, .... requests
-app.use("/admin", adminAuth);
-
-app.get("/user/login", (req, res) => {
-  res.send("User logged in successfully");
+    throw new Error("fsdofd");
+    res.send("User Data Sent");
+  } catch (err) {
+    res.status(500).send("Some Error contact support team");
+  }
 });
 
-app.get("/user/data", userAuth, (req, res) => {
-  res.send("User Data Sent");
-});
-
-app.get("/admin/getAllData", (req, res) => {
-  res.send("All Data Sent");
+app.use("/", (err, req, res, next) => {
+  if (err) {
+    // Log your error
+    res.status(500).send("something went wrong");
+  }
 });
 
 app.listen(3000, () => {
