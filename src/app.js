@@ -11,7 +11,7 @@ app.post("/signup", async (req, res) => {
   try {
     await user.save();
     res.send("User Added Successfully!");
-  } catch (error) {
+  } catch (err) {
     res.status(400).send("Error saving the user:" + err.message);
   }
 });
@@ -66,18 +66,22 @@ app.patch("/user", async (req, res) => {
   const userId = req.body.userId;
   const data = req.body;
   try {
-    await User.findByIdAndUpdate({ _id: userId }, data);
+    const user = await User.findByIdAndUpdate({ _id: userId }, data, {
+      returnDocument: "after",
+      runValidators: true,
+    });
+    console.log(user);
     res.send("User updated successfully");
   } catch (err) {
-    res.status(400).send("Something went wrong");
+    res.status(400).send("UPDATE FAILED:" + err.message);
   }
 });
 
 connectDB()
   .then(() => {
     console.log("Database connection established...");
-    app.listen(3000, () => {
-      console.log("Server is Successfully listening on port 3000");
+    app.listen(7777, () => {
+      console.log("Server is Successfully listening on port 7777");
     });
   })
   .catch((err) => {
