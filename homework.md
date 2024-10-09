@@ -66,3 +66,5 @@ Solution: Add this line "db.users.dropIndex( "firstName_1" )" in Mongoose shell 
 - Create a custom validate function for gender
 - Improve the DB schema - Put all appropiate validations on each field in Schema
 - Add timestamps to the userSchema
+- Add API level validation on Patch request & Signup post API
+- DATA Sanitization - Add API validation for each field
