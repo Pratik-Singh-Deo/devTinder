@@ -75,3 +75,6 @@ Solution: Add this line "db.users.dropIndex( "firstName_1" )" in Mongoose shell 
 - Validate data in Signup API
 - Install bcrypt package
 - Create passwordHash using bcrypt.hash & save the user is encripted password
+- Mrunala@1234
+- Create login API
+- Compare passwords and throw errors if email or password is invalid
