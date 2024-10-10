@@ -68,3 +68,10 @@ Solution: Add this line "db.users.dropIndex( "firstName_1" )" in Mongoose shell 
 - Add timestamps to the userSchema
 - Add API level validation on Patch request & Signup post API
 - DATA Sanitization - Add API validation for each field
+- Install validator
+- Explore validator library function and Use validator functions of password, email, photoURL
+- Never trust req.body
+
+- Validate data in Signup API
+- Install bcrypt package
+- Create passwordHash using bcrypt.hash & save the user is encripted password
