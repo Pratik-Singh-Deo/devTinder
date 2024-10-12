@@ -78,3 +78,10 @@ Solution: Add this line "db.users.dropIndex( "firstName_1" )" in Mongoose shell 
 - Mrunala@1234
 - Create login API
 - Compare passwords and throw errors if email or password is invalid
+
+- install cookie-parse
+- Just send a dummy cookie to user
+- Create GET / profile API and check if you get the cookie back
+- Install jsonwebtoken
+- In login API, after email and password validation, create a JWT token and send it to user in cookie
+- Read the cookies inside you profile API and find the logged in user
