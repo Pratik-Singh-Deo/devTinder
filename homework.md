@@ -60,6 +60,8 @@
 -> Bug Fix: (E11000 duplicate key error collection: testDb.users index: firstname_1 dup key: { firstname: "Test" })
 Solution: Add this line "db.users.dropIndex( "firstName_1" )" in Mongoose shell of MongoDB Compass
 
+-> Bug Fix: If MongoDB compass shows IP address problem then go to MongoDB Atlas and add current IP address
+
 - Explore schematype options from the documention
 - Add required, unique, lowercase, min, minLength, trim
 - Add default
@@ -85,3 +87,16 @@ Solution: Add this line "db.users.dropIndex( "firstName_1" )" in Mongoose shell 
 - Install jsonwebtoken
 - In login API, after email and password validation, create a JWT token and send it to user in cookie
 - Read the cookies inside you profile API and find the logged in user
+- userAuth Middleware
+- Add the userAuth middle ware in profile API and a new sendConnectionRequest API
+- Set the expiry of JWT token and cookies to 7 days
+- Create userSchema method to getJWT()
+- Create UserSchema method to comparepassword(passwordInputByUser)
+
+- Exolore tinder APIs
+- Create a list of all API you can think of in Dev Tinder
+- Group multiple routes under respective routers
+- Read documentation for express.Router
+- Create routes folder for managing auth, profile, request routers
+- Create authRouter, profileRouter, requestRouter
+- Import these routers in app.js
