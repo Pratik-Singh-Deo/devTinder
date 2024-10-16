@@ -104,3 +104,15 @@ Solution: Add this line "db.users.dropIndex( "firstName_1" )" in Mongoose shell 
 - Create PATCH /profile/edit
 - Create PATCH /profile/password API => forgot password API
 - Make you validate all data in every POST, PATCH apis
+
+- Create connection Request schema
+- Send Connection Request API
+- Proper validation of Data
+- Think about all corner cases
+- $or query $and query in mongoose
+- schema.pre("save") function
+- Read more about indexes in MongoDB
+- Why do we need index in DB?
+- What is the advantages and disadvantages of creating indexes?
+- Read the article about compound indexes from mongodb documents
+- Always think about corner cases

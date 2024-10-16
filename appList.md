@@ -10,12 +10,11 @@
 
 - GET / profile/view
 - PATCH / profile/edit
-- PATCH / profile/password
+- PATCH / profile/password // Forgot password API
 
 # ConnectionRequestRouter:
 
-- POST /request/send/interested/:userId
-- POST /request/sed/ignored/:userId
+- POST /request/send/:status/:userId
 - POST /request/review/accepted/:requestId
 - POST /request/review/reject/:requestId
 
@@ -25,4 +24,4 @@
 - GET /user/requests/received
 - GET /user/feed - Gets you the profiles of other users on platform
 
-Status Ignore, Interested, Accepted, Rejected
+Status Ignored, Interested, Accepted, Rejected
