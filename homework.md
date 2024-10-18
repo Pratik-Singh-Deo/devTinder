@@ -125,3 +125,4 @@ Solution: Add this line "db.users.dropIndex( "firstName_1" )" in Mongoose shell 
 
 - Logic for GET /feed API
 - Explore the $nin, $and, $nd and other query operators
+- Pagination
