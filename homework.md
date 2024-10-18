@@ -116,3 +116,12 @@ Solution: Add this line "db.users.dropIndex( "firstName_1" )" in Mongoose shell 
 - What is the advantages and disadvantages of creating indexes?
 - Read the article about compound indexes from mongodb documents
 - Always think about corner cases
+
+- Write code with proper validations for POST /request/review/:status/:requestId
+- Thought process - POST vs GET
+- Read about ref and populate https://mongoosejs.com/docs/populate.html
+- Create GET /user/requests/received with all the checks
+- Create GET /user/connections
+
+- Logic for GET /feed API
+- Explore the $nin, $and, $nd and other query operators
